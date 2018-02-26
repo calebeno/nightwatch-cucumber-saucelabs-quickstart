@@ -20,7 +20,11 @@
     "e2e-test": "nightwatch",
     "e2e-test:chrome": "npm run e2e-test -- --env chrome",
     "e2e-test:firefox": "npm run e2e-test -- --env firefox",
-    "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome"
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome",
+    "e2e-test:sauce:chrome": "nightwatch --config nightwatch.sauce.conf.js --env chrome",
+    "e2e-test:sauce:ff": "nightwatch --config nightwatch.sauce.conf.js --env firefox",
+    "e2e-test:sauce:edge": "nightwatch --config nightwatch.sauce.conf.js --env edge",
+    "makeTest": "make test"
   },
   "author": "",
   "license": "MIT"
