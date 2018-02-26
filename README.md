@@ -9,12 +9,12 @@ npm install
 ```
 
 ### Test Run Commands
-#####Run Tests Locally
+##### Run Tests Locally
 ```
 npm run e2e:chrome
 npm run e2e:firefox
 ```
-#####Run Tests On Sauce Labs
+##### Run Tests On Sauce Labs
 ```
 export  SAUCE_USERNAME={saucelabs username}
 export  SAUCE_ACCESS_KEY={saucelabs access key}
