@@ -17,16 +17,15 @@
     "selenium-server": "^3.9.1"
   },
   "scripts": {
-    "e2e": "nightwatch",
-    "e2e:chrome": "npm run e2e -- --env chrome",
-    "e2e:firefox": "npm run e2e -- --env firefox",
+    "e2e": "npm run e2e:chrome & npm run e2e:firefox",
+    "e2e:chrome": "nightwatch --env chrome",
+    "e2e:firefox": "nightwatch --env firefox",
     "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome",
 
-    "e2e:sauce": "npm run e2e:sauce:chrome & npm run e2e:sauce:ff & npm run e2e:sauce:edge",
+    "e2e:sauce": "npm run e2e:sauce:chrome & npm run e2e:sauce:firefox & npm run e2e:sauce:edge",
     "e2e:sauce:chrome": "nightwatch --config nightwatch.sauce.conf.js --env chrome",
-    "e2e:sauce:ff": "nightwatch --config nightwatch.sauce.conf.js --env firefox",
-    "e2e:sauce:edge": "nightwatch --config nightwatch.sauce.conf.js --env edge",
-    "makeTest": "make test"
+    "e2e:sauce:firefox": "nightwatch --config nightwatch.sauce.conf.js --env firefox",
+    "e2e:sauce:edge": "nightwatch --config nightwatch.sauce.conf.js --env edge"
   },
   "author": "",
   "license": "MIT"
