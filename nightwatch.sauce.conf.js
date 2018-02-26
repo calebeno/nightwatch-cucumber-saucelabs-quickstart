@@ -3,12 +3,11 @@ require('nightwatch-cucumber')({
 });
 
 module.exports = {
-    src_folders: ['tests'],
     output_folder: 'reports',
-    // custom_commands_path: 'custom_commands',
     custom_assertions_path: '',
     page_objects_path: 'page_objects',
-    globals_path: '',
+    live_output: false,
+    disable_colors: false,
 
     selenium: {
         start_process: false,
@@ -63,7 +62,7 @@ module.exports = {
             desiredCapabilities: {
                 platform: 'Windows 10',
                 browserName: 'MicrosoftEdge',
-                version: '14.14393'
+                version: 'latest'
             }
         }
     }
