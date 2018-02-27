@@ -1,12 +1,17 @@
-class ICCHomePage {
-    constructor() {
-        this.url = 'https://www.icctechnology.com/';
-        this.elements = {
-            body: 'body',
-            feature: 'h1.feature.homepage'
-            // feature: 'div.sub-heading.homepage'
+module.exports = {
+    url: 'https://www.icctechnology.com/',
+    elements: {
+        body: 'body',
+        feature: 'h1.feature.homepage',
+        startAConversationButton: {
+            selector: '//a[text()[contains(., "Start a Conversation")]]',
+            locateStrategy: 'xpath'
         }
-    }
-}
-
-module.exports = new ICCHomePage();
+    },
+    commands: [{
+        clickStartAConversationButton: function() {
+            return this.waitForElementVisible('@startAConversationButton', 1000)
+                .click('@startAConversationButton');
+        }
+    }]
+};
